@@ -1,0 +1,41 @@
+{
+  "name": "dsh-ai-indexer",
+  "version": "0.1.0",
+  "description": "通用 AI 项目索引助手：增量扫描代码库，产出受 token 预算约束的项目快照、契约风险面板，并在交付后用原生问答卡片做交互式复盘。",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "index",
+    "context",
+    "ai"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "icon": "./icon.svg",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "client",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "DESIGN.md"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

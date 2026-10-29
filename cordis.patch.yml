@@ -1,0 +1,8 @@
+# dsh-ai-indexer — mount declaration.
+#
+# DSH stacks bundle patches at startup and inserts this row into the plugin tree.
+# The Host half lives in lib/index.js (main), the browser half in client/client.js
+# (exports "./client", described by package.json's dsh.client).
+- insert:
+    - id: dsh-ai-indexer
+      name: dsh-ai-indexer
